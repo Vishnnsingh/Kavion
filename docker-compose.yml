@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_SERVICE_ID: ${VITE_SERVICE_ID}
+        VITE_PUBLIC_KEY: ${VITE_PUBLIC_KEY}
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
