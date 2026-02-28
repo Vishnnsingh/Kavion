@@ -323,9 +323,9 @@ export default function App() {
               </section>
 
               {/* Clients Section */}
-              {/* <section id="clients">
+              <section id="clients">
                 <ClientSection />
-              </section> */}
+              </section>
 
               {/* CTA Section */}
               <section id="cta">
