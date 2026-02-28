@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Folder, Terminal, Globe, Brain, Smartphone, StickyNote, FolderOpen, Home, Mail } from 'lucide-react';
+import { Folder, Terminal, Globe, Brain, Smartphone, StickyNote, FolderOpen, Home, Mail, Building2 } from 'lucide-react';
 import { useState } from 'react';
 
 interface DockItemProps {
@@ -21,7 +21,7 @@ function DockItem({ icon, label, onClick }: DockItemProps) {
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       <motion.div
-        className="w-12 h-12 rounded-xl backdrop-blur-xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+        className="w-12 h-12 rounded-xl backdrop-blur-xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow snap-center flex-shrink-0"
         whileHover={{ scale: 1.1 }}
       >
         {icon}
@@ -50,9 +50,9 @@ export function MacDock({ onDockItemClick }: MacDockProps) {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.2, duration: 0.6 }}
-      className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
+      className="fixed bottom-4 left-0 right-0 z-50 md:left-1/2 md:-translate-x-1/2 md:right-auto"
     >
-      <div className="px-3 py-2.5 rounded-2xl backdrop-blur-2xl bg-white/10 border border-white/20 shadow-2xl flex items-end gap-2">
+      <div className="px-3 py-2.5 rounded-2xl backdrop-blur-2xl bg-white/10 border border-white/20 shadow-2xl flex items-end gap-2 overflow-x-auto scrollbar-hide mx-4 md:mx-0 md:overflow-x-visible snap-x snap-mandatory scroll-smooth">
         <DockItem 
           icon={<FolderOpen className="text-blue-400" size={24} />} 
           label="Finder"
@@ -67,6 +67,11 @@ export function MacDock({ onDockItemClick }: MacDockProps) {
           icon={<Folder className="text-cyan-400" size={24} />} 
           label="About"
           onClick={() => onDockItemClick?.('about')}
+        />
+        <DockItem 
+          icon={<Building2 className="text-purple-400" size={24} />} 
+          label="Clients"
+          onClick={() => onDockItemClick?.('clients')}
         />
         <DockItem 
           icon={<Terminal className="text-green-400" size={24} />} 

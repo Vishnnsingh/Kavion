@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { X, Home, Folder, FileText, Image, Code, ChevronRight, StickyNote, Settings } from 'lucide-react';
+import { X, Home, Folder, FileText, Image, Code, ChevronRight, StickyNote, Settings, Building2 } from 'lucide-react';
 import { useState } from 'react';
 
 interface FinderAppProps {
@@ -27,6 +27,7 @@ export function FinderApp({ isOpen, onClose, onNavigate }: FinderAppProps) {
       { name: 'Process', type: 'page', icon: <Image size={20} className="text-green-400" />, action: 'process' },
       { name: 'Contact', type: 'page', icon: <FileText size={20} className="text-pink-400" />, action: 'contact' },
       { name: 'Notes', type: 'page', icon: <StickyNote size={20} className="text-yellow-400" />, action: 'notes' },
+      { name: 'Clients', type: 'page', icon: <Building2 size={20} className="text-purple-400" />, action: 'clients' },
       { name: 'Settings', type: 'page', icon: <Settings size={20} className="text-gray-400" />, action: 'settings' }
     ]
   };

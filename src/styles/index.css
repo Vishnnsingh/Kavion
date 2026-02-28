@@ -29,3 +29,22 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* Hide scrollbar for dock */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Snap scrolling for dock items */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-mandatory {
+  scroll-snap-stop: always;
+}

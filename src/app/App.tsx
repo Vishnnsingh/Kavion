@@ -4,6 +4,7 @@ import { MacOSMenuBar } from './components/MacOSMenuBar';
 import { MacDock } from './components/MacDock';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
+import { ClientSection } from './components/ClientSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ProcessSection } from './components/ProcessSection';
 import { ContactSection } from './components/ContactSection';
@@ -93,6 +94,7 @@ export default function App() {
 
     const sections: Record<string, string> = {
       about: '#about',
+      clients: '#clients',
       developer: '#process',
       web: '#services',
       ai: '#services',
@@ -165,6 +167,7 @@ export default function App() {
       default:
         const sections: Record<string, string> = {
           about: '#about',
+          clients: '#clients',
           developer: '#process',
           web: '#services',
           ai: '#services',
@@ -318,6 +321,11 @@ export default function App() {
               <section id="process">
                 <ProcessSection />
               </section>
+
+              {/* Clients Section */}
+              {/* <section id="clients">
+                <ClientSection />
+              </section> */}
 
               {/* CTA Section */}
               <section id="cta">
