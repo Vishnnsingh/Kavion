@@ -131,7 +131,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-white mb-1">Phone</h4>
-                  <p className="text-white/60 text-sm">+91 9534470488</p>
+                  <p className="text-white/60 text-sm">+91 8084048167</p>
                   <p className="text-white/60 text-sm">+91 7903096712</p>
                 </div>
               </div>
